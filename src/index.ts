@@ -1,11 +1,8 @@
 import { MovieParser } from "./movieParser";
 import { SeriesParser } from "./seriesParser";
 
-let moviesPath = "/Users/andersennl/iclouddrive/Coding/Node/mediaparser/media/testmovies";
-let seriesPath = "/Users/andersennl/iclouddrive/Coding/Node/mediaparser/media/testseries";
-
-let movieParser = new MovieParser(moviesPath);
+let movieParser = new MovieParser();
 let movies = movieParser.parse();
 
-let seriesParser = new SeriesParser(seriesPath);
+let seriesParser = new SeriesParser();
 let series = seriesParser.parse();
