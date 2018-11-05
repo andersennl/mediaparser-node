@@ -9,7 +9,7 @@ export class MovieParser {
     this.path = path;
   }
 
-  parseMovies(): Movie[] {
+  parse(): Movie[] {
     let movies: Movie[] = [];
     let files = fs.readdirSync(this.path);
 
