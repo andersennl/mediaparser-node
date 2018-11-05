@@ -16,7 +16,6 @@ export class MovieParser {
     for (let file of files) {
       let movie = new Movie(file);
       movies.push(movie);
-      console.log(movie);
     }
 
     return movies;
