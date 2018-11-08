@@ -7,19 +7,30 @@
   <title>Mediaserver</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" type="text/css" media="screen" href="css/skeleton.css" />
-  <!-- <script src="main.js"></script> -->
 </head>
 
 <body>
   <div class="cotainer">
     <div class="row">
       <div class="one-column">
-        <p>List of media</p>
+        <h1>Movies</h1>
         <p>
           <ul>
-            <li>
-              <%= movies.length %>
-            </li>
+            <% movies.forEach(function(movie) { %>
+              <li>
+                <%= movie.getName() %>
+              </li>
+            <% }); %>
+          </ul>
+        </p>
+        <h1>Series</h1>
+        <p>
+          <ul>
+            <% series.forEach(function(serie) { %>
+              <li>
+                <%= serie.getName() %>
+              </li>
+            <% }); %>
           </ul>
         </p>
       </div>
