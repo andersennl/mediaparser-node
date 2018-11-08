@@ -1,5 +1,5 @@
 import { Season } from "./season";
-import { SeasonParser } from "./seasonParser";
+import { SeasonParser } from "../services/seasonParser";
 
 export class Series {
   private readonly path: string;

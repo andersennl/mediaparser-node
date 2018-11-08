@@ -1,5 +1,5 @@
-import { Season } from "./season";
-import { Config } from "./config";
+import { Season } from "../models/season";
+import { Config } from "../models/config";
 import * as fs from "fs";
 
 export class SeasonParser {

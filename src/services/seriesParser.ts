@@ -1,5 +1,5 @@
-import { Series } from "./series";
-import { Config } from "./config";
+import { Series } from "../models/series";
+import { Config } from "../models/config";
 import * as fs from "fs";
 
 export class SeriesParser {

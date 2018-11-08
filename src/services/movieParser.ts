@@ -1,5 +1,5 @@
-import { Movie } from "./movie";
-import { Config } from "./config";
+import { Movie } from "../models/movie";
+import { Config } from "../models/config";
 import * as fs from "fs";
 
 export class MovieParser {
