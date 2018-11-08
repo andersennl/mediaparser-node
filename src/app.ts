@@ -17,7 +17,7 @@ let seriesParser = new SeriesParser();
 let series = seriesParser.parse();
 
 app.get("/", (req: Request, res: Response) => {
-  res.render('pages/index', { movies: movies });
+  res.render('pages/index', { movies: movies, series: series });
 });
 
 app.listen(3200, () => {
