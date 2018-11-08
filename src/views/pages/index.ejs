@@ -6,36 +6,37 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>Mediaserver</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" type="text/css" media="screen" href="css/skeleton.css" />
+  <link rel="stylesheet" type="text/css" href="static/bootstrap.min.css" />
 </head>
 
 <body>
-  <div class="cotainer">
+  <div class="container">
     <div class="row">
-      <div class="one-column">
+      <div class="col-sm">
         <h1>Movies</h1>
         <p>
-          <ul>
+          <ul class="list-group">
             <% movies.forEach(function(movie) { %>
-              <li>
+              <li class="list-group-item">
                 <%= movie.getName() %>
               </li>
-            <% }); %>
-          </ul>
-        </p>
-        <h1>Series</h1>
-        <p>
-          <ul>
-            <% series.forEach(function(serie) { %>
-              <li>
-                <%= serie.getName() %>
-              </li>
-            <% }); %>
-          </ul>
-        </p>
+              <% }); %>
+            </ul>
+          </p>
+          <h1>Series</h1>
+          <p>
+            <ul class="list-group">
+              <% series.forEach(function(serie) { %>
+                <li class="list-group-item">
+                  <%= serie.getName() %>
+                  <span class="badge badge-primary badge-pill">2</span>
+                </li>
+                <% }); %>
+              </ul>
+            </p>
+          </div>
+        </div>
       </div>
-    </div>
-  </div>
-</body>
+    </body>
 
-</html>
+    </html>
