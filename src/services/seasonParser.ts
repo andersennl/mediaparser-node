@@ -15,8 +15,9 @@ export class SeasonParser {
 
     let seasons: Season[] = [];
     let files = fs.readdirSync(fullPath);
+    let filtered_files = files.filter(file => !file.match(/\./));
 
-    for (let file of files) {
+    for (let file of filtered_files) {
       let season = new Season(file, fullPath);
       seasons.push(season);
     }

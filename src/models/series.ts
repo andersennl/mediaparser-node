@@ -14,10 +14,6 @@ export class Series {
     return this.path;
   }
 
-  getSeasonCount(): number {
-    return this.seasons.length;
-  }
-
   getSeasons(): Season[] {
     return this.seasons;
   }
