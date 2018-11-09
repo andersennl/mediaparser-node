@@ -20,6 +20,6 @@ app.get("/", (req: Request, res: Response) => {
   res.render('pages/index', { movies: movies, series: series });
 });
 
-app.listen(3200, () => {
+app.listen(80, () => {
   console.log("Express started");
 });
