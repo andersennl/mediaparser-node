@@ -23,7 +23,7 @@ Run the app with
 ```bash
 node dist/app.js
 ```
-Open your browser with the following url `http://localhost:3200`.
+Open your browser with the following url `http://localhost`.
 
 ## Development
 There are two other versions of this project written in [Java](https://github.com/andersennl/media-parser-java), and [Python](https://github.com/andersennl/media-parser-python). The Node version is the only one actively being developed though.
