@@ -10,30 +10,35 @@
 </head>
 
 <body>
-  <div class="container">
+  <div class="container fluid">
     <div class="row">
-      <div class="col-sm">
-        <h1>Movies</h1>
+      <div class="col-md-12">
+        <h1>Mediaserver</h1>
         <p>
-          <ul class="list-group">
-            <% movies.forEach(function(movie) { %>
-              <li class="list-group-item">
-                <%= movie.getName() %>
-              </li>
+          <a href="http://mediaserver.local:32400/web/index.html">Plex Media Server</a>
+        </p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <h2>Movies</h2>
+        <% movies.forEach(function(movie) { %>
+          <%= movie.getName() %> <br>
+        <% }); %>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <h1>Series</h1>
+        <% series.forEach(function(serie) { %>
+            <p>
+              <b><%= serie.getName() %></b><br>
+
+              <% serie.getSeasons().forEach(function(season) { %>
+                <%= season.getName() %>: <%= season.getEpisodeCount() %> Episoden <br>
               <% }); %>
-            </ul>
-          </p>
-          <h1>Series</h1>
-          <p>
-            <ul class="list-group">
-              <% series.forEach(function(serie) { %>
-                <li class="list-group-item">
-                  <%= serie.getName() %>
-                  <span class="badge badge-primary badge-pill">2</span>
-                </li>
-                <% }); %>
-              </ul>
             </p>
+          <% }); %>
           </div>
         </div>
       </div>
