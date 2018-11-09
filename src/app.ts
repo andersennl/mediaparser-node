@@ -8,7 +8,7 @@ import { Request, Response } from "express";
 let app = express();
 app.set("view engine", "ejs");
 app.set("views", path.join(__dirname, "../src/views"));
-app.use(express.static(__dirname + "../src/assets"));
+app.use('/static', express.static('static'));
 
 let movieParser = new MovieParser();
 let movies = movieParser.parse();
