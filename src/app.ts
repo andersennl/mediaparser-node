@@ -9,6 +9,7 @@ let app = express();
 app.set("view engine", "ejs");
 app.set("views", path.join(__dirname, "../src/views"));
 app.use('/static', express.static('static'));
+app.disable("etag");
 
 let movieParser = new MovieParser();
 let movies = movieParser.parse();
