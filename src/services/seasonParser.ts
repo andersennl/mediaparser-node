@@ -1,6 +1,7 @@
 import { Season } from "../models/season";
 import { Config } from "../models/config";
 import * as fs from "fs";
+const string = require('lodash/string');
 
 export class SeasonParser {
   private readonly path: string;
@@ -15,7 +16,7 @@ export class SeasonParser {
 
     let seasons: Season[] = [];
     let files = fs.readdirSync(fullPath);
-    let filtered_files = files.filter(file => !file.match(/\./));
+    let filtered_files = files.filter(file => !string.startsWith(file, "."));
 
     for (let file of filtered_files) {
       let season = new Season(file, fullPath);
